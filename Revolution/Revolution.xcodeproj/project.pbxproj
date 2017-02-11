@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240864CA1E4F19F0005C1450 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864C91E4F19F0005C1450 /* Hud.swift */; };
+		240864CC1E4F1A18005C1450 /* SkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CB1E4F1A18005C1450 /* SkillButton.swift */; };
+		240864CE1E4F29DB005C1450 /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CD1E4F29DB005C1450 /* Road.swift */; };
+		240864D01E4F3108005C1450 /* RoadUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CF1E4F3108005C1450 /* RoadUnit.swift */; };
 		24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF58D1E4E407500171D53 /* AppDelegate.swift */; };
 		24EAF5921E4E407500171D53 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24EAF5911E4E407500171D53 /* Actions.sks */; };
 		24EAF5961E4E407500171D53 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5951E4E407500171D53 /* GameViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240864C91E4F19F0005C1450 /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		240864CB1E4F1A18005C1450 /* SkillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillButton.swift; sourceTree = "<group>"; };
+		240864CD1E4F29DB005C1450 /* Road.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
+		240864CF1E4F3108005C1450 /* RoadUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadUnit.swift; sourceTree = "<group>"; };
 		24EAF58A1E4E407500171D53 /* Revolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EAF58D1E4E407500171D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24EAF5911E4E407500171D53 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -59,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240864C81E4F19D2005C1450 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				240864C91E4F19F0005C1450 /* Hud.swift */,
+				240864CB1E4F1A18005C1450 /* SkillButton.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		24EAF5811E4E407400171D53 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +95,7 @@
 		24EAF58C1E4E407500171D53 /* Revolution */ = {
 			isa = PBXGroup;
 			children = (
+				240864C81E4F19D2005C1450 /* UI */,
 				24EAF5B21E4E6DA100171D53 /* City */,
 				24EAF5AB1E4E6D3600171D53 /* Util */,
 				24EAF58D1E4E407500171D53 /* AppDelegate.swift */,
@@ -112,6 +130,8 @@
 				24EAF5B31E4E6DAB00171D53 /* City.swift */,
 				24EAF5BB1E4E733C00171D53 /* Connection.swift */,
 				24EAF5C01E4E787C00171D53 /* Map.swift */,
+				240864CD1E4F29DB005C1450 /* Road.swift */,
+				240864CF1E4F3108005C1450 /* RoadUnit.swift */,
 			);
 			name = City;
 			sourceTree = "<group>";
@@ -196,6 +216,8 @@
 				24EAF5C11E4E787C00171D53 /* Map.swift in Sources */,
 				24EAF5B11E4E6D6A00171D53 /* TimeInterval+Extensions.swift in Sources */,
 				24EAF5B01E4E6D6A00171D53 /* CGFloat+Extensions.swift in Sources */,
+				240864CE1E4F29DB005C1450 /* Road.swift in Sources */,
+				240864CA1E4F19F0005C1450 /* Hud.swift in Sources */,
 				24EAF5961E4E407500171D53 /* GameViewController.swift in Sources */,
 				24EAF5B61E4E6E3B00171D53 /* Enemy.swift in Sources */,
 				24EAF5B81E4E6E8C00171D53 /* Entity.swift in Sources */,
@@ -203,6 +225,8 @@
 				24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */,
 				24EAF5BA1E4E704A00171D53 /* Player.swift in Sources */,
 				24EAF5B41E4E6DAB00171D53 /* City.swift in Sources */,
+				240864CC1E4F1A18005C1450 /* SkillButton.swift in Sources */,
+				240864D01E4F3108005C1450 /* RoadUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +390,7 @@
 				24EAF5A41E4E407500171D53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

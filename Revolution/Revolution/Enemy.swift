@@ -6,14 +6,14 @@
 //  Copyright © 2017 Nikola Bozhkov. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 class Enemy: Entity {
     
-    var detection: Int
+    static var detection: CGFloat!
     
-    init() {
+    class func initialize() {
+        initialize(power: 10, diplomacy: 10, speed: 10)
         self.detection = 10
-        super.init(power: 10, diplomacy: 10, speed: 10)
     }
 }

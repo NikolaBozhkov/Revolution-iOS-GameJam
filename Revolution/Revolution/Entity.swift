@@ -6,15 +6,15 @@
 //  Copyright © 2017 Nikola Bozhkov. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 class Entity {
     
-    var power: Int
-    var diplomacy: Int
-    var speed: Int
+    static var power: CGFloat!
+    static var diplomacy: CGFloat!
+    static var speed: CGFloat!
     
-    init(power: Int, diplomacy: Int, speed: Int) {
+    class func initialize(power: CGFloat, diplomacy: CGFloat, speed: CGFloat) {
         self.power = power
         self.diplomacy = diplomacy
         self.speed = speed

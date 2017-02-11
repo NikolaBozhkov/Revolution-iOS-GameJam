@@ -6,14 +6,14 @@
 //  Copyright © 2017 Nikola Bozhkov. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 class Player: Entity {
     
-    var stealth: Int
+    static var stealth: CGFloat!
     
-    init() {
-        self.stealth = 10
-        super.init(power: 0, diplomacy: 0, speed: 0)
+    static func initialize() {
+        initialize(power: 0, diplomacy: 0, speed: 0)
+        self.stealth = 0
     }
 }
