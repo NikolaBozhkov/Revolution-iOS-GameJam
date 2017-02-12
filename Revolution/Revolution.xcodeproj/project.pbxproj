@@ -11,6 +11,21 @@
 		240864CC1E4F1A18005C1450 /* SkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CB1E4F1A18005C1450 /* SkillButton.swift */; };
 		240864CE1E4F29DB005C1450 /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CD1E4F29DB005C1450 /* Road.swift */; };
 		240864D01E4F3108005C1450 /* RoadUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864CF1E4F3108005C1450 /* RoadUnit.swift */; };
+		240864D41E4F59FD005C1450 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864D31E4F59FD005C1450 /* UIColor+Extensions.swift */; };
+		240864D61E4F692D005C1450 /* PopulationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864D51E4F692D005C1450 /* PopulationBar.swift */; };
+		240864DC1E4F9BB8005C1450 /* MotionControl-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240864DB1E4F9BB8005C1450 /* MotionControl-Bold.otf */; };
+		240864DD1E4F9C43005C1450 /* ceviche-one-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240864D71E4F8D7C005C1450 /* ceviche-one-regular.otf */; };
+		240864DF1E4FA263005C1450 /* SF_Atarian_System.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 240864DE1E4FA263005C1450 /* SF_Atarian_System.ttf */; };
+		240864E31E4FC37E005C1450 /* PopulationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864E21E4FC37E005C1450 /* PopulationLabel.swift */; };
+		240864E51E4FD867005C1450 /* GlowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864E41E4FD867005C1450 /* GlowNode.swift */; };
+		240864E81E4FF1CB005C1450 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864E61E4FF1CB005C1450 /* Queue.swift */; };
+		240864E91E4FF1CB005C1450 /* QNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864E71E4FF1CB005C1450 /* QNode.swift */; };
+		240864EB1E500DF0005C1450 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864EA1E500DF0005C1450 /* PriorityQueue.swift */; };
+		240864ED1E500E61005C1450 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864EC1E500E61005C1450 /* Heap.swift */; };
+		240864EF1E501E11005C1450 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864EE1E501E11005C1450 /* Resources.swift */; };
+		240864F11E5041EA005C1450 /* MessageUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F01E5041EA005C1450 /* MessageUnit.swift */; };
+		240864F31E50420D005C1450 /* EnemyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F21E50420D005C1450 /* EnemyUnit.swift */; };
+		240864F51E50421C005C1450 /* PlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F41E50421C005C1450 /* PlayerUnit.swift */; };
 		24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF58D1E4E407500171D53 /* AppDelegate.swift */; };
 		24EAF5921E4E407500171D53 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24EAF5911E4E407500171D53 /* Actions.sks */; };
 		24EAF5961E4E407500171D53 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5951E4E407500171D53 /* GameViewController.swift */; };
@@ -26,7 +41,6 @@
 		24EAF5B61E4E6E3B00171D53 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5B51E4E6E3B00171D53 /* Enemy.swift */; };
 		24EAF5B81E4E6E8C00171D53 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5B71E4E6E8C00171D53 /* Entity.swift */; };
 		24EAF5BA1E4E704A00171D53 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5B91E4E704A00171D53 /* Player.swift */; };
-		24EAF5BC1E4E733C00171D53 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5BB1E4E733C00171D53 /* Connection.swift */; };
 		24EAF5C11E4E787C00171D53 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5C01E4E787C00171D53 /* Map.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +49,21 @@
 		240864CB1E4F1A18005C1450 /* SkillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillButton.swift; sourceTree = "<group>"; };
 		240864CD1E4F29DB005C1450 /* Road.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
 		240864CF1E4F3108005C1450 /* RoadUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadUnit.swift; sourceTree = "<group>"; };
+		240864D31E4F59FD005C1450 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		240864D51E4F692D005C1450 /* PopulationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulationBar.swift; sourceTree = "<group>"; };
+		240864D71E4F8D7C005C1450 /* ceviche-one-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceviche-one-regular.otf"; sourceTree = "<group>"; };
+		240864DB1E4F9BB8005C1450 /* MotionControl-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MotionControl-Bold.otf"; sourceTree = "<group>"; };
+		240864DE1E4FA263005C1450 /* SF_Atarian_System.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Atarian_System.ttf; sourceTree = "<group>"; };
+		240864E21E4FC37E005C1450 /* PopulationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulationLabel.swift; sourceTree = "<group>"; };
+		240864E41E4FD867005C1450 /* GlowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlowNode.swift; sourceTree = "<group>"; };
+		240864E61E4FF1CB005C1450 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		240864E71E4FF1CB005C1450 /* QNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QNode.swift; sourceTree = "<group>"; };
+		240864EA1E500DF0005C1450 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		240864EC1E500E61005C1450 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		240864EE1E501E11005C1450 /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		240864F01E5041EA005C1450 /* MessageUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageUnit.swift; sourceTree = "<group>"; };
+		240864F21E50420D005C1450 /* EnemyUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyUnit.swift; sourceTree = "<group>"; };
+		240864F41E50421C005C1450 /* PlayerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUnit.swift; sourceTree = "<group>"; };
 		24EAF58A1E4E407500171D53 /* Revolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EAF58D1E4E407500171D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24EAF5911E4E407500171D53 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -52,7 +81,6 @@
 		24EAF5B51E4E6E3B00171D53 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		24EAF5B71E4E6E8C00171D53 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		24EAF5B91E4E704A00171D53 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		24EAF5BB1E4E733C00171D53 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		24EAF5C01E4E787C00171D53 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +100,8 @@
 			children = (
 				240864C91E4F19F0005C1450 /* Hud.swift */,
 				240864CB1E4F1A18005C1450 /* SkillButton.swift */,
+				240864D51E4F692D005C1450 /* PopulationBar.swift */,
+				240864E21E4FC37E005C1450 /* PopulationLabel.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -110,6 +140,9 @@
 				24EAF5B51E4E6E3B00171D53 /* Enemy.swift */,
 				24EAF5B71E4E6E8C00171D53 /* Entity.swift */,
 				24EAF5B91E4E704A00171D53 /* Player.swift */,
+				240864D71E4F8D7C005C1450 /* ceviche-one-regular.otf */,
+				240864DB1E4F9BB8005C1450 /* MotionControl-Bold.otf */,
+				240864DE1E4FA263005C1450 /* SF_Atarian_System.ttf */,
 			);
 			path = Revolution;
 			sourceTree = "<group>";
@@ -117,9 +150,15 @@
 		24EAF5AB1E4E6D3600171D53 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				240864E61E4FF1CB005C1450 /* Queue.swift */,
+				240864E71E4FF1CB005C1450 /* QNode.swift */,
+				240864D31E4F59FD005C1450 /* UIColor+Extensions.swift */,
 				24EAF5AC1E4E6D6A00171D53 /* CGPoint+Extensions.swift */,
 				24EAF5AD1E4E6D6A00171D53 /* CGFloat+Extensions.swift */,
 				24EAF5AE1E4E6D6A00171D53 /* TimeInterval+Extensions.swift */,
+				240864EA1E500DF0005C1450 /* PriorityQueue.swift */,
+				240864EC1E500E61005C1450 /* Heap.swift */,
+				240864EE1E501E11005C1450 /* Resources.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -127,11 +166,14 @@
 		24EAF5B21E4E6DA100171D53 /* City */ = {
 			isa = PBXGroup;
 			children = (
+				240864E41E4FD867005C1450 /* GlowNode.swift */,
 				24EAF5B31E4E6DAB00171D53 /* City.swift */,
-				24EAF5BB1E4E733C00171D53 /* Connection.swift */,
 				24EAF5C01E4E787C00171D53 /* Map.swift */,
 				240864CD1E4F29DB005C1450 /* Road.swift */,
 				240864CF1E4F3108005C1450 /* RoadUnit.swift */,
+				240864F01E5041EA005C1450 /* MessageUnit.swift */,
+				240864F21E50420D005C1450 /* EnemyUnit.swift */,
+				240864F41E50421C005C1450 /* PlayerUnit.swift */,
 			);
 			name = City;
 			sourceTree = "<group>";
@@ -198,9 +240,12 @@
 			files = (
 				24EAF5991E4E407500171D53 /* Main.storyboard in Resources */,
 				24EAF59B1E4E407500171D53 /* Assets.xcassets in Resources */,
+				240864DC1E4F9BB8005C1450 /* MotionControl-Bold.otf in Resources */,
 				24EAF5AA1E4E49F600171D53 /* MainScene.sks in Resources */,
 				24EAF59E1E4E407500171D53 /* LaunchScreen.storyboard in Resources */,
 				24EAF5921E4E407500171D53 /* Actions.sks in Resources */,
+				240864DD1E4F9C43005C1450 /* ceviche-one-regular.otf in Resources */,
+				240864DF1E4FA263005C1450 /* SF_Atarian_System.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,19 +257,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				24EAF5A81E4E421300171D53 /* MainScene.swift in Sources */,
-				24EAF5BC1E4E733C00171D53 /* Connection.swift in Sources */,
 				24EAF5C11E4E787C00171D53 /* Map.swift in Sources */,
+				240864E91E4FF1CB005C1450 /* QNode.swift in Sources */,
 				24EAF5B11E4E6D6A00171D53 /* TimeInterval+Extensions.swift in Sources */,
 				24EAF5B01E4E6D6A00171D53 /* CGFloat+Extensions.swift in Sources */,
 				240864CE1E4F29DB005C1450 /* Road.swift in Sources */,
+				240864F11E5041EA005C1450 /* MessageUnit.swift in Sources */,
 				240864CA1E4F19F0005C1450 /* Hud.swift in Sources */,
 				24EAF5961E4E407500171D53 /* GameViewController.swift in Sources */,
 				24EAF5B61E4E6E3B00171D53 /* Enemy.swift in Sources */,
+				240864D61E4F692D005C1450 /* PopulationBar.swift in Sources */,
+				240864ED1E500E61005C1450 /* Heap.swift in Sources */,
 				24EAF5B81E4E6E8C00171D53 /* Entity.swift in Sources */,
 				24EAF5AF1E4E6D6A00171D53 /* CGPoint+Extensions.swift in Sources */,
+				240864F31E50420D005C1450 /* EnemyUnit.swift in Sources */,
 				24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */,
+				240864D41E4F59FD005C1450 /* UIColor+Extensions.swift in Sources */,
 				24EAF5BA1E4E704A00171D53 /* Player.swift in Sources */,
 				24EAF5B41E4E6DAB00171D53 /* City.swift in Sources */,
+				240864F51E50421C005C1450 /* PlayerUnit.swift in Sources */,
+				240864E81E4FF1CB005C1450 /* Queue.swift in Sources */,
+				240864EB1E500DF0005C1450 /* PriorityQueue.swift in Sources */,
+				240864E51E4FD867005C1450 /* GlowNode.swift in Sources */,
+				240864E31E4FC37E005C1450 /* PopulationLabel.swift in Sources */,
+				240864EF1E501E11005C1450 /* Resources.swift in Sources */,
 				240864CC1E4F1A18005C1450 /* SkillButton.swift in Sources */,
 				240864D01E4F3108005C1450 /* RoadUnit.swift in Sources */,
 			);

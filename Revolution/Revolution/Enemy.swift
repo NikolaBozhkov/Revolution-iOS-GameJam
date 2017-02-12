@@ -8,12 +8,17 @@
 
 import CoreGraphics
 
-class Enemy: Entity {
+class Enemy {
     
+    static var power: CGFloat!
+    static var diplomacy: CGFloat!
+    static var speed: CGFloat!
     static var detection: CGFloat!
     
     class func initialize() {
-        initialize(power: 10, diplomacy: 10, speed: 10)
-        self.detection = 10
+        power = 10
+        diplomacy = 10
+        speed = 10
+        detection = 2
     }
 }

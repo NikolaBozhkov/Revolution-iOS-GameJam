@@ -10,13 +10,13 @@ import CoreGraphics
 
 class Entity {
     
-    static var power: CGFloat!
-    static var diplomacy: CGFloat!
-    static var speed: CGFloat!
-    
-    class func initialize(power: CGFloat, diplomacy: CGFloat, speed: CGFloat) {
-        self.power = power
-        self.diplomacy = diplomacy
-        self.speed = speed
-    }
+//    static var power: CGFloat!
+//    static var diplomacy: CGFloat!
+//    static var speed: CGFloat!
+//    
+//    class func initialize(power: CGFloat, diplomacy: CGFloat, speed: CGFloat) {
+//        power = power
+//        diplomacy = diplomacy
+//        speed = speed
+//    }
 }

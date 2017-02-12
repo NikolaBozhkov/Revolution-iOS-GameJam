@@ -8,81 +8,90 @@
 
 import SpriteKit
 
-class Road {
+class Road: SKSpriteNode {
     
     let cityOne: City
     let cityTwo: City
     let distance: CGFloat
     let deltaNormal: CGPoint
     
-    var messages: Set<RoadUnit> = []
-    var enemyUnits: Set<RoadUnit> = []
-    var playerUnits: Set<RoadUnit> = []
+    var messageUnits: Set<MessageUnit> = []
+    var enemyUnits: Set<EnemyUnit> = []
+    var playerUnits: Set<PlayerUnit> = []
     
     init(cityOne: City, cityTwo: City) {
         self.cityOne = cityOne
         self.cityTwo = cityTwo
-        self.distance = cityOne.position.distanceTo(cityTwo.position)
-        self.deltaNormal = (cityOne.position - cityTwo.position).normalized()
+        self.distance = cityTwo.position.distanceTo(cityOne.position)
+        self.deltaNormal = (cityTwo.position - cityOne.position).normalized()
+        
+        super.init(texture: nil, color: UIColor(hex: "524938"), size: CGSize(width: self.distance, height: 4))
+        
+        self.blendMode = .add
+        self.alpha = 0.5
+        self.zPosition = 50
+        
+        self.position = cityOne.position + deltaNormal * distance / 2
+        self.zRotation = atan(deltaNormal.y / deltaNormal.x)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func update(deltaT: CGFloat) {
+        
         for playerUnit in self.playerUnits {
-            moveRoadUnit(playerUnit, moveFraction: Player.speed * deltaT)
+            playerUnit.update(deltaT: deltaT)
         }
         
-        for message in self.messages {
-            moveRoadUnit(message, moveFraction: Enemy.speed * deltaT)
+        for messageUnit in self.messageUnits {
+            messageUnit.update(deltaT: deltaT)
             
-            // Check if player intersected it
             for playerUnit in self.playerUnits {
-                if self.checkUnitIntersepcion(unitOne: message, unitTwo: playerUnit) {
-                    messages.remove(message)
+                if checkUnitIntersepcion(unitOne: playerUnit, unitTwo: messageUnit) {
+                    messageUnit.remove()
                 }
             }
         }
         
         for enemyUnit in self.enemyUnits {
-            moveRoadUnit(enemyUnit, moveFraction: Enemy.speed * deltaT)
+            enemyUnit.update(deltaT: deltaT)
             
-            // Check if enemy intersected with player
             for playerUnit in self.playerUnits {
-                if self.checkUnitIntersepcion(unitOne: enemyUnit, unitTwo: playerUnit) {
-                    let playerFactor = CGFloat(playerUnit.count) * Player.power
-                    let enemyFactor = CGFloat(enemyUnit.count) * Enemy.power
+                if checkUnitIntersepcion(unitOne: playerUnit, unitTwo: enemyUnit) {
+                    let enemyKills = CGFloat(playerUnit.count) * Player.power / 7
+                    let playerKills = CGFloat(enemyUnit.count) * Enemy.power / 7
                     
-                    if playerFactor >= enemyFactor {
-                        self.enemyUnits.remove(enemyUnit)
+                    //FIX LATER, MUST KILL UNITS
+                    
+                    playerUnit.count -= Int(playerKills)
+                    enemyUnit.count -= Int(enemyKills)
+                    
+                    if playerUnit.count <= 0 {
+                        playerUnit.remove()
                     }
                     
-                    if enemyFactor >= playerFactor {
-                        self.playerUnits.remove(playerUnit)
+                    if enemyUnit.count <= 0 {
+                        enemyUnit.remove()
                     }
                 }
             }
         }
     }
     
-    func moveRoadUnit(_ roadUnit: RoadUnit, moveFraction: CGFloat) {
-        roadUnit.positionFractionPrev = roadUnit.positionFraction
-        roadUnit.positionFraction += moveFraction
-        roadUnit.position = (self.deltaNormal * self.distance) * roadUnit.positionFraction
-    }
-    
     func checkUnitIntersepcion(unitOne: RoadUnit, unitTwo: RoadUnit) -> Bool {
-        let posFractionPrevDelta = unitOne.positionFractionPrev - unitTwo.positionFractionPrev
-        let posFractionDelta = unitOne.positionFraction - unitTwo.positionFraction
-        let posFractionSign = posFractionDelta * posFractionPrevDelta
-        let posFractionPrevSum = unitOne.positionFractionPrev + unitTwo.positionFractionPrev
-        let posFractionSum = unitOne.positionFraction + unitTwo.positionFraction
+        let disUnitOne = unitOne.currentSource.position.distanceTo(unitOne.position)
+        let disUnitOnePrev = unitOne.currentSource.position.distanceTo(unitOne.prevPosition)
+        let disUnitTwo = unitTwo.currentSource.position.distanceTo(unitTwo.position)
+        let disUnitTwoPrev = unitTwo.currentSource.position.distanceTo(unitTwo.prevPosition)
         
-        // If they crossed paths or if some caught up to the other
-        if (unitTwo.target == unitOne.target && posFractionSign < 0)
-            || (unitTwo.target != unitOne.target && posFractionPrevSum < 1 && posFractionSum >= 1) {
+        if (unitOne.currentTarget == unitTwo.currentTarget && (disUnitOne - disUnitTwo) * (disUnitOnePrev - disUnitTwoPrev) <= 0)
+            || (unitOne.currentTarget != unitTwo.currentTarget && disUnitOne + disUnitTwo >= distance) {
             
             return true
+        } else {
+            return false
         }
-        
-        return false
     }
 }

@@ -8,17 +8,34 @@
 
 import SpriteKit
 
-class SkillButton: SKNode {
+class SkillButton: SKSpriteNode {
     
-    var skillValue: Int
-    var skillValueLabel: SKLabelNode!
+    var skillValue: Int = 0 {
+        didSet {
+            if name == "power" {
+                Player.power = CGFloat(skillValue)
+            } else if name == "diplomacy" {
+                Player.diplomacy = CGFloat(skillValue)
+            } else if name == "speed" {
+                Player.speed = CGFloat(skillValue)
+            } else if name == "stealth" {
+                Player.stealth = CGFloat(skillValue)
+            }
+        }
+    }
     
-    init(name: String, icon: SKTexture, skillValue: Int) {
-        self.skillValue = skillValue
+    override init(texture: SKTexture?, color: UIColor, size: CGSize) {
+        super.init(texture: texture, color: color, size: size)
         
-        super.init()
-        
-        self.skillValueLabel = self.childNode(withName: "skillValueLabel") as! SKLabelNode
+        if name == "power" {
+            skillValue = Int(Player.power)
+        } else if name == "diplomacy" {
+            skillValue = Int(Player.diplomacy)
+        } else if name == "speed" {
+            skillValue = Int(Player.speed)
+        } else if name == "stealth" {
+            skillValue = Int(Player.stealth)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
