@@ -46,7 +46,7 @@ class PopulationBar: SKNode {
                 let deltaLabel = PopulationLabel(label)
                 deltaLabel.countLabel.text = (delta > 0 ? "+" : "") + String(delta)
                 
-                deltaLabel.position += CGPoint(x: 0, y: 10)
+                deltaLabel.position += CGPoint(x: 0, y: 17)
                 deltaLabel.alpha = 0.7
                 deltaLabel.run(SKAction.sequence([SKAction(named: "DeltaPopulationAction")!,
                                                   SKAction.removeFromParent()]))

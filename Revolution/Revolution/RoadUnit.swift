@@ -38,7 +38,7 @@ class RoadUnit: SKSpriteNode {
         self.totalDistance = totalDistance
         
         super.init(texture: texture, color: .red, size: texture == nil ? CGSize(width: 10, height: 10) : texture!.size())
-        self.zPosition = 100
+        self.zPosition = 200
         addToRoad()
         
         self.position = currentSource.position
@@ -54,6 +54,7 @@ class RoadUnit: SKSpriteNode {
     func update(deltaT: CGFloat) {
         // Move
         let moveP = currentRoadNormal * (deltaT * getSpeed())
+        self.prevPosition = self.position
         self.position += moveP
         
         if currentSource.position.distanceTo(self.position) >= currentRoad.distance {
@@ -63,8 +64,6 @@ class RoadUnit: SKSpriteNode {
             removeFromRoad()
             moveNextRoad()
         }
-        
-        self.prevPosition = self.position
     }
     
     func getSpeed() -> CGFloat {

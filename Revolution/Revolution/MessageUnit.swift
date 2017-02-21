@@ -34,6 +34,6 @@ class MessageUnit: RoadUnit {
     }
     
     override func getSpeed() -> CGFloat {
-        return Enemy.speed * 50
+        return Enemy.speed * 4
     }
 }

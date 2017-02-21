@@ -26,6 +26,8 @@
 		240864F11E5041EA005C1450 /* MessageUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F01E5041EA005C1450 /* MessageUnit.swift */; };
 		240864F31E50420D005C1450 /* EnemyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F21E50420D005C1450 /* EnemyUnit.swift */; };
 		240864F51E50421C005C1450 /* PlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F41E50421C005C1450 /* PlayerUnit.swift */; };
+		240864F71E508718005C1450 /* SuspicionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240864F61E508718005C1450 /* SuspicionBar.swift */; };
+		240864FA1E50A21A005C1450 /* SuspicionEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 240864F91E50A21A005C1450 /* SuspicionEmitter.sks */; };
 		24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF58D1E4E407500171D53 /* AppDelegate.swift */; };
 		24EAF5921E4E407500171D53 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24EAF5911E4E407500171D53 /* Actions.sks */; };
 		24EAF5961E4E407500171D53 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF5951E4E407500171D53 /* GameViewController.swift */; };
@@ -64,6 +66,8 @@
 		240864F01E5041EA005C1450 /* MessageUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageUnit.swift; sourceTree = "<group>"; };
 		240864F21E50420D005C1450 /* EnemyUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyUnit.swift; sourceTree = "<group>"; };
 		240864F41E50421C005C1450 /* PlayerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUnit.swift; sourceTree = "<group>"; };
+		240864F61E508718005C1450 /* SuspicionBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuspicionBar.swift; sourceTree = "<group>"; };
+		240864F91E50A21A005C1450 /* SuspicionEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SuspicionEmitter.sks; sourceTree = "<group>"; };
 		24EAF58A1E4E407500171D53 /* Revolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EAF58D1E4E407500171D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24EAF5911E4E407500171D53 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -102,8 +106,17 @@
 				240864CB1E4F1A18005C1450 /* SkillButton.swift */,
 				240864D51E4F692D005C1450 /* PopulationBar.swift */,
 				240864E21E4FC37E005C1450 /* PopulationLabel.swift */,
+				240864F61E508718005C1450 /* SuspicionBar.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		240864F81E50A1E6005C1450 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				240864F91E50A21A005C1450 /* SuspicionEmitter.sks */,
+			);
+			name = Effects;
 			sourceTree = "<group>";
 		};
 		24EAF5811E4E407400171D53 = {
@@ -125,6 +138,7 @@
 		24EAF58C1E4E407500171D53 /* Revolution */ = {
 			isa = PBXGroup;
 			children = (
+				240864F81E50A1E6005C1450 /* Effects */,
 				240864C81E4F19D2005C1450 /* UI */,
 				24EAF5B21E4E6DA100171D53 /* City */,
 				24EAF5AB1E4E6D3600171D53 /* Util */,
@@ -243,6 +257,7 @@
 				240864DC1E4F9BB8005C1450 /* MotionControl-Bold.otf in Resources */,
 				24EAF5AA1E4E49F600171D53 /* MainScene.sks in Resources */,
 				24EAF59E1E4E407500171D53 /* LaunchScreen.storyboard in Resources */,
+				240864FA1E50A21A005C1450 /* SuspicionEmitter.sks in Resources */,
 				24EAF5921E4E407500171D53 /* Actions.sks in Resources */,
 				240864DD1E4F9C43005C1450 /* ceviche-one-regular.otf in Resources */,
 				240864DF1E4FA263005C1450 /* SF_Atarian_System.ttf in Resources */,
@@ -271,6 +286,7 @@
 				24EAF5B81E4E6E8C00171D53 /* Entity.swift in Sources */,
 				24EAF5AF1E4E6D6A00171D53 /* CGPoint+Extensions.swift in Sources */,
 				240864F31E50420D005C1450 /* EnemyUnit.swift in Sources */,
+				240864F71E508718005C1450 /* SuspicionBar.swift in Sources */,
 				24EAF58E1E4E407500171D53 /* AppDelegate.swift in Sources */,
 				240864D41E4F59FD005C1450 /* UIColor+Extensions.swift in Sources */,
 				24EAF5BA1E4E704A00171D53 /* Player.swift in Sources */,

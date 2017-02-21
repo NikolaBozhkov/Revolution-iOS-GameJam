@@ -15,4 +15,11 @@ struct Resources {
     static let troopCtrlBtnAction = SKAction(named: "TroopCtrlBtnAction")!
     
     static let messengerIconTexture = SKTexture(imageNamed: "messengerIcon")
+    static let playerTexture = SKTexture(imageNamed: "Revolutioner")
+    static let suspicionBarBgTexture = SKTexture(imageNamed: "SuspicionBarBackground")
+    static let suspicionBarLeftTexture = SKTexture(imageNamed: "SBarLR")
+    static let suspicionBarMidTexture = SKTexture(imageNamed: "SBarMid")
+    static let suspicionBarIconTexture = SKTexture(imageNamed: "SBarIcon")
+    
+    static let suspicionEmitter = SKEmitterNode(fileNamed: "SuspicionEmitter.sks")!
 }

@@ -14,7 +14,7 @@ class MainScene: SKScene {
     let map = Map()
     var selectedCity: City?
     var troopCountLabel: SKLabelNode!
-    var troopCountSelected: Int = 0 {
+    var troopCountSelected: Int = 1 {
         didSet {
             troopCountLabel.text = String(troopCountSelected)
         }
@@ -35,7 +35,8 @@ class MainScene: SKScene {
         Player.initialize(powerLabel: childNode(withName: "powerLabel")! as! SKLabelNode,
                           diplomacyLabel: childNode(withName: "diplomacyLabel")! as! SKLabelNode,
                           speedLabel: childNode(withName: "speedLabel")! as! SKLabelNode,
-                          stealthLabel: childNode(withName: "stealthLabel")! as! SKLabelNode)
+                          stealthLabel: childNode(withName: "stealthLabel")! as! SKLabelNode,
+                          coinsLabel: childNode(withName: "coinsLabel") as! SKLabelNode)
         
         Enemy.initialize()
         self.addChild(self.map)
@@ -86,21 +87,14 @@ class MainScene: SKScene {
             }
         } else if let node = node {
             // If skill level up
-            if node.name == "power" {
-                Player.power.add(1)
-            } else if node.name == "diplomacy" {
-                Player.diplomacy.add(1)
-            } else if node.name == "speed" {
-                Player.speed.add(1)
-            } else if node.name == "stealth" {
-                Player.stealth.add(1)
+            if node.name != nil && ["power", "diplomacy", "speed", "stealth"].contains(node.name!) {
+                Player.levelUp(skill: node.name!)
             }
             
             // If selecting city
             if let city = city {
                 // If targeting other city
                 if self.selectedCity != nil && self.selectedCity != city {
-                    print("enter1")
                     self.troopCountSelected = CGFloat(self.troopCountSelected) > selectedCity!.player ? Int(selectedCity!.player) : self.troopCountSelected
                     
                     if self.troopCountSelected > 0 {
@@ -110,19 +104,18 @@ class MainScene: SKScene {
                 
                 // Select / deselect
                 if self.selectedCity != nil {
-                    print("enter2")
+                    self.selectedCity!.removeGlow()
                     self.selectedCity = nil
-                    self.troopCountSelected = 0
+                    self.troopCountSelected = 1
                     self.troopControl.run(Resources.troopCtrlHideAction)
                 } else {
-                    print("enter3")
                     self.selectedCity = city
+                    city.addGlow()
                     self.troopControl.run(Resources.troopCtrlShowAction)
                 }
             }
             
             if node.parent!.name == "troopControl" && node.name != "troopControlBg" {
-                print("enter4")
                 self.troopBtnSelected = node
                 self.troopBtnSelected?.isHidden = true
             }

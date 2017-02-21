@@ -11,14 +11,12 @@ import CoreGraphics
 class Enemy {
     
     static var power: CGFloat!
-    static var diplomacy: CGFloat!
     static var speed: CGFloat!
     static var detection: CGFloat!
     
     class func initialize() {
-        power = 10
-        diplomacy = 10
-        speed = 10
-        detection = 2
+        power = 4
+        speed = 2
+        detection = 1
     }
 }

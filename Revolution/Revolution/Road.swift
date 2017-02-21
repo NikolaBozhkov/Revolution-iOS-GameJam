@@ -28,7 +28,7 @@ class Road: SKSpriteNode {
         super.init(texture: nil, color: UIColor(hex: "524938"), size: CGSize(width: self.distance, height: 4))
         
         self.blendMode = .add
-        self.alpha = 0.5
+        self.alpha = 0.25
         self.zPosition = 50
         
         self.position = cityOne.position + deltaNormal * distance / 2
@@ -81,17 +81,19 @@ class Road: SKSpriteNode {
     }
     
     func checkUnitIntersepcion(unitOne: RoadUnit, unitTwo: RoadUnit) -> Bool {
-        let disUnitOne = unitOne.currentSource.position.distanceTo(unitOne.position)
-        let disUnitOnePrev = unitOne.currentSource.position.distanceTo(unitOne.prevPosition)
-        let disUnitTwo = unitTwo.currentSource.position.distanceTo(unitTwo.position)
-        let disUnitTwoPrev = unitTwo.currentSource.position.distanceTo(unitTwo.prevPosition)
-        
-        if (unitOne.currentTarget == unitTwo.currentTarget && (disUnitOne - disUnitTwo) * (disUnitOnePrev - disUnitTwoPrev) <= 0)
-            || (unitOne.currentTarget != unitTwo.currentTarget && disUnitOne + disUnitTwo >= distance) {
+        if unitOne.currentPathIndex < unitOne.paths.count && unitTwo.currentPathIndex < unitTwo.paths.count {
+            let disUnitOne = unitOne.currentSource.position.distanceTo(unitOne.position)
+            let disUnitOnePrev = unitOne.currentSource.position.distanceTo(unitOne.prevPosition)
+            let disUnitTwo = unitTwo.currentSource.position.distanceTo(unitTwo.position)
+            let disUnitTwoPrev = unitTwo.currentSource.position.distanceTo(unitTwo.prevPosition)
             
-            return true
-        } else {
-            return false
+            if (unitOne.currentTarget == unitTwo.currentTarget && (disUnitOne - disUnitTwo) * (disUnitOnePrev - disUnitTwoPrev) <= 0)
+                || (unitOne.currentTarget != unitTwo.currentTarget && disUnitOne + disUnitTwo >= distance) {
+                
+                return true
+            }
         }
+        
+        return false
     }
 }

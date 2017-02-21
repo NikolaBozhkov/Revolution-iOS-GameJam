@@ -18,7 +18,7 @@ class Map: SKNode {
     var roadUnits = Set<RoadUnit>()
     
     init(directions: Int = 4) {
-        self.mainCity = City(direction: 0, tier: 0, enemy: 100, texture: SKTexture(imageNamed: "capital_base"),
+        self.mainCity = City(direction: 0, tier: 0, enemy: 50, texture: SKTexture(imageNamed: "capital_base"),
                              textureGlow: SKTexture(imageNamed: "capital_glow"), position: CGPoint(x: 0, y: -20))
         
         super.init()
@@ -34,7 +34,7 @@ class Map: SKNode {
             let currentAngle = CGFloat(i) * angle + startAngle + angleMod
             let posNormal = CGPoint(angle: currentAngle)
             var position = posNormal * 210
-            let tier1City = City(direction: i, tier: 1, enemy: 50, texture: SKTexture(imageNamed: "tier1_base"),
+            let tier1City = City(direction: i, tier: 1, enemy: 25, texture: SKTexture(imageNamed: "tier1_base"),
                                  textureGlow: SKTexture(imageNamed: "tier1_glow"), position: position + mainCity.position)
             tierOneCities.insert(tier1City)
             self.addChild(tier1City)
@@ -46,7 +46,7 @@ class Map: SKNode {
             tier1City.roads.insert(road)
             
             position = posNormal * 350
-            let tier2City = City(direction: i, tier: 2, enemy: 25, texture: SKTexture(imageNamed: "tier2_base"),
+            let tier2City = City(direction: i, tier: 2, enemy: 10, texture: SKTexture(imageNamed: "tier2_base"),
                                  textureGlow: SKTexture(imageNamed: "tier2_glow"), position: position + mainCity.position)
             tierTwoCities.insert(tier2City)
             self.addChild(tier2City)
@@ -61,7 +61,7 @@ class Map: SKNode {
                 
                 let innerAngle = currentAngle - tier3Angle + tier3Angle * CGFloat(j)
                 let innerPosition = position + CGPoint(angle: innerAngle) * 110
-                let tier3City = City(direction: i, tier: 3, enemy: 10, texture: SKTexture(imageNamed: "tier3_base"),
+                let tier3City = City(direction: i, tier: 3, enemy: 7, texture: SKTexture(imageNamed: "tier3_base"),
                                      textureGlow: SKTexture(imageNamed: "tier3_glow"), position: innerPosition + mainCity.position)
                 self.addChild(tier3City)
                 self.tierThreeCities.insert(tier3City)

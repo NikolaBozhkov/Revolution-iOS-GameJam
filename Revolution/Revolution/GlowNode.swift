@@ -33,4 +33,17 @@ class GlowNode: SKSpriteNode {
             SKAction.fadeAlpha(to: from, duration: duration),
             SKAction.fadeAlpha(to: to, duration: duration)])))
     }
+    
+    func addGlow() {
+        let addedGlow = SKSpriteNode(texture: self.glow.texture)
+        addedGlow.zPosition = -15
+        addedGlow.blendMode = .add
+        addedGlow.alpha = 0.7
+        addedGlow.name = "addedGlow"
+        self.addChild(addedGlow)
+    }
+    
+    func removeGlow() {
+        self.childNode(withName: "addedGlow")?.removeFromParent()
+    }
 }
